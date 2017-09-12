@@ -1,8 +1,3 @@
-# Add `~/bin` to the `$PATH`
-export PATH="$HOME/bin:$PATH";
-export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
-export PATH="$PATH:/opt/local/share/java/android-sdk-macosx/platform-tools"
-
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
@@ -40,7 +35,7 @@ fi;
 complete -W "NSGlobalDomain" defaults;
 
 export CLICOLOR=1
-export LSCOLORS=ExFxBxDxCxegedabagacad
+export LSCOLORS=GxFxCxDxBxegedabagaced
 alias ls='ls -GFh'
 alias ll="ls -l"
 alias la="ll -a"
