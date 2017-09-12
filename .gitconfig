@@ -13,9 +13,6 @@
 	trustExitCode = true
 [commit]
 	template = /Users/trondbn/.stCommitMsg
-[github]
-        user = trondbn
-        token = f195289594bdb1f19dd977e8b792b8e5845f3ebd
 [diff]
 	tool = opendiff
 [lfs "customtransfer.bitbucket-media-api"]
@@ -23,7 +20,8 @@
 [alias]
 	co = commit
 	br = branch
-	sm = submodule
+        sm = submodule
+        st = status
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
