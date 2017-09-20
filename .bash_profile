@@ -40,8 +40,6 @@ alias ls='ls -GFh'
 alias ll="ls -l"
 alias la="ll -a"
 
-alias pylab="ipython --pylab"
-
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
