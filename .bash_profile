@@ -34,6 +34,9 @@ fi;
 # You could just use `-g` instead, but I like being explicit
 complete -W "NSGlobalDomain" defaults;
 
+# git completion
+source ~/.git-completion.bash
+
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 alias ls='ls -GFh'
