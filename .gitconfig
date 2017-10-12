@@ -18,7 +18,8 @@
 [lfs "customtransfer.bitbucket-media-api"]
 	path = /Users/trondbn/bin/git-lfs-bitbucket-media-api
 [alias]
-	co = commit
+        ci = commit
+        co = checkout
 	br = branch
         sm = submodule
         st = status
