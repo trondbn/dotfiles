@@ -35,7 +35,9 @@ fi;
 complete -W "NSGlobalDomain" defaults;
 
 # git completion
-source ~/.git-completion.bash
+if [ -f /opt/local/share/git/contrib/completion/git-prompt.sh ]; then
+    source /opt/local/share/git/contrib/completion/git-prompt.sh;
+fi;
 
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
