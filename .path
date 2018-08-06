@@ -1,5 +1,6 @@
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+export PATH="$PATH:$HOME/Library/Python/3.6/bin
 export PATH="$PATH:/opt/local/share/java/android-sdk-macosx/platform-tools"
 
