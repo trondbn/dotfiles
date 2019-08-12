@@ -22,6 +22,7 @@ set wildmenu
 set wildmode=longest:list,full
 
 filetype plugin indent on    " required
+let g:tex_flavor = 'latex'
 
 
 ""==================== LaTeX-suite ====================
@@ -74,7 +75,7 @@ filetype plugin indent on    " required
 "==================== vimtex ====================
 
 " Vimtex options
-let g:vimtex_compiler_progname = "/Applications/MacPorts/MacVim.app/Contents/bin/mvim"
+let g:vimtex_compiler_progname = "/Applications/MacVim.app/Contents/bin/mvim"
 let g:vimtex_compiler_method = "latexmk"
 "let g:vimtex_compiler_latexmk = {
 "    \ 'backend' : DEPENDS ON SYSTEM (SEE BELOW),
@@ -157,4 +158,3 @@ let g:fastfold_fdmhook = 0
 nmap zuz <Plug>(FastFoldUpdate)
 let g:fastfold_fold_command_suffixes =  ['x','X','a','A','o','O','c','C']
 let g:fastfold_fold_movement_commands = [']z', '[z', 'zj', 'zk']
-
