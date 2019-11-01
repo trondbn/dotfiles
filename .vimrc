@@ -7,7 +7,6 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-"Plugin 'vim-latex/vim-latex'
 Plugin 'lervag/vimtex'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
@@ -15,6 +14,10 @@ Plugin 'Konfekt/FastFold'
 
 call vundle#end()            " required
 
+
+" map ctrl-space to omnicompletion
+inoremap <C-Space> <C-x><C-o>
+inoremap <C-@> <C-Space>
 
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 set autoread
@@ -27,23 +30,7 @@ let g:tex_flavor = 'latex'
 
 
 "==================== vimtex ====================
-let g:vimtex_compiler_progname = "/Applications/MacVim.app/Contents/bin/mvim"
 let g:vimtex_compiler_method = "latexmk"
-"let g:vimtex_compiler_latexmk = {
-"    \ 'backend' : DEPENDS ON SYSTEM (SEE BELOW),
-"    \ 'background' : 1,
-"    \ 'build_dir' : '',
-"    \ 'callback' : 1,
-"    \ 'continuous' : 1,
-"    \ 'executable' : 'latexmk',
-"    \ 'options' : [
-"    \   '-pdf',
-"    \   '-verbose',
-"    \   '-file-line-error',
-"    \   '-synctex=1',
-"    \   '-interaction=nonstopmode',
-"    \ ],
-"    \}
 let maplocalleader = ","
 let g:vimtex_enabled = 1
 let g:vimtex_fold_enabled = 1
@@ -68,6 +55,7 @@ call vimtex#imaps#add_map({
 "==================== UltiSnips ====================
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<tab>"
+leg g:UltiSnipsListSnippets="<c-tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
