@@ -15,6 +15,7 @@ Plugin 'Konfekt/FastFold'
 
 call vundle#end()            " required
 
+
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 set autoread
 
@@ -25,56 +26,7 @@ filetype plugin indent on    " required
 let g:tex_flavor = 'latex'
 
 
-""==================== LaTeX-suite ====================
-"
-"" REQUIRED. This makes vim invoke Latex-Suite when you open a tex file.
-""filetype plugin on
-"
-"" IMPORTANT: win32 users will need to have 'shellslash' set so that latex
-"" can be called correctly.
-"set shellslash
-"
-"" IMPORTANT: grep will sometimes skip displaying the file name if you
-"" search in a singe file. This will confuse Latex-Suite. Set your grep
-"" program to always generate a file-name.
-"set grepprg=grep\ -nH\ $*
-"
-"" OPTIONAL: This enables automatic indentation as you type.
-""filetype indent on
-"
-"" Change shortcut key for latex-suite
-"let mapleader = "¨"
-"
-"" OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
-"" 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
-"" The following changes the default filetype back to 'tex':
-"let g:tex_flavor='latex'
-"
-"imap <D-i> <Plug>Tex_InsertItemOnThisLine
-"let g:Tex_Env_figure = "\\begin{figure}[<+htpb+>]\<CR>\\centering\<CR>\\includegraphics[<+options+>]{<+filename+>}\<CR>\\caption{<+caption text+>}\<CR>\\label{fig:<+label+>}\<CR>\\end{figure}<++>"
-"
-"" Change default target to pdf, if not dvi is used
-"let g:Tex_DefaultTargetFormat = 'pdf'
-"
-"" display rules
-"let g:Tex_ViewRule_ps = 'Skim'
-"let g:Tex_ViewRule_pdf = 'Skim'
-"let g:Tex_ViewRule_dvi = 'Skim'
-"
-"" A comma seperated list of formats which need multiple compilations to be
-"" correctly compiled.
-"let g:Tex_MultipleCompileFormats = 'dvi,pdf'
-"
-"" stop inserting "<++>"s
-""let g:Imap_UsePlaceHolders = 0
-"
-"" Enable Alt-key macros
-"let g:Tex_AdvancedMath = 1
-"
-
 "==================== vimtex ====================
-
-" Vimtex options
 let g:vimtex_compiler_progname = "/Applications/MacVim.app/Contents/bin/mvim"
 let g:vimtex_compiler_method = "latexmk"
 "let g:vimtex_compiler_latexmk = {
@@ -111,35 +63,6 @@ call vimtex#imaps#add_map({
   \ 'rhs' : '\hat',
   \ 'wrapper' : 'vimtex#imaps#wrap_math'
   \})
-
-""==================== neosnippet ====================
-"" Plugin key-mappings.
-"" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
-"imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-"smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-"xmap <C-k>     <Plug>(neosnippet_expand_target)
-"
-"" SuperTab like snippets' behavior.
-"" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
-""imap <expr><TAB>
-"" \ pumvisible() ? "\<C-n>" :
-"" \ neosnippet#expandable_or_jumpable() ?
-"" \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-""smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-"" \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-"
-"" For conceal markers.
-"if has('conceal')
-"  set conceallevel=2 concealcursor=niv
-"endif
-"
-"" Enable snipMate compatibility feature.
-"" let g:neosnippet#enable_snipmate_compatibility = 1
-"
-"" Expand the completed snippet trigger by <CR>.
-""imap <expr><CR>
-""\ (pumvisible() && neosnippet#expandable()) ?
-""\ "\<Plug>(neosnippet_expand)" : "\<CR>"
 
 
 "==================== UltiSnips ====================
