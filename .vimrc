@@ -1,3 +1,6 @@
+set pythonthreehome=~/.pyenv/versions/anaconda3-2020.02
+set pythonthreedll=~/.pyenv/versions/anaconda3-2020.02/lib/libpython3.7m.dylib
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -31,11 +34,26 @@ let g:tex_flavor = 'latex'
 
 "==================== vimtex ====================
 let g:vimtex_compiler_method = "latexmk"
+let g:vimtex_compiler_latexmk = {
+        \ 'backend' : 'jobs',
+        \ 'background' : 1,
+        \ 'build_dir' : '',
+        \ 'callback' : 1,
+        \ 'continuous' : 1,
+        \ 'executable' : 'latexmk',
+        \ 'hooks' : [],
+        \ 'options' : [
+        \   '-verbose',
+        \   '-file-line-error',
+        \   '-synctex=1',
+        \   '-interaction=nonstopmode',
+        \ ],
+        \}
 let maplocalleader = ","
 let g:vimtex_enabled = 1
 let g:vimtex_fold_enabled = 1
 let g:vimtex_view_method = 'skim'
-"let g:vimtex_quickfix_method = 'pplatex'
+let g:vimtex_parser_bib_backend = 'bibparse'
 let g:vimtex_quickfix_latexlog = {'underfull' : 0}
 let g:vimtex_quickfix_open_on_warning = 0
 let g:vimtex_format_enabled = 1
@@ -55,7 +73,7 @@ call vimtex#imaps#add_map({
 "==================== UltiSnips ====================
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<tab>"
-leg g:UltiSnipsListSnippets="<c-tab>"
+let g:UltiSnipsListSnippets="<c-tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 

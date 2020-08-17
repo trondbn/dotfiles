@@ -1,8 +1,6 @@
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
-export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 export PATH="/Users/trondbn/.pyenv/bin:$PATH"
-export PATH="$PATH:/opt/local/share/java/android-sdk-macosx/platform-tools"
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"

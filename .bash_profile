@@ -23,9 +23,7 @@ for option in autocd globstar; do
 done;
 
 # Add tab completion for many Bash commands
-if [ -f /opt/local/etc/bash_completion ]; then
-	source /opt/local/etc/bash_completion;
-fi;
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2- | tr ' ' '\n')" scp sftp ssh;
@@ -35,8 +33,8 @@ fi;
 complete -W "NSGlobalDomain" defaults;
 
 # git completion
-if [ -f /opt/local/share/git/contrib/completion/git-prompt.sh ]; then
-    source /opt/local/share/git/contrib/completion/git-prompt.sh;
+if [ -f /usr/local/etc/bash_completion.d/git-prompt.sh ]; then
+    source /usr/local/etc/bash_completion.d/git-prompt.sh;
 fi;
 
 export CLICOLOR=1
@@ -59,4 +57,3 @@ _pip_completion()
 }
 complete -o default -F _pip_completion pip
 # pip bash completion end
-
