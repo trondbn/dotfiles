@@ -8,7 +8,7 @@
 	editor = vim
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
@@ -17,12 +17,12 @@
 [lfs "customtransfer.bitbucket-media-api"]
 	path = /Users/trondbn/bin/git-lfs-bitbucket-media-api
 [alias]
-        ci = commit
-        co = checkout
+  ci = commit
+  co = checkout
 	br = branch
-        sm = submodule
-        st = status
-        sw = switch
+  sm = submodule
+  st = status
+  sw = switch
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge --skip -- %f
