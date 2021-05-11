@@ -1,5 +1,5 @@
-set pythonthreehome=~/.pyenv/versions/anaconda3-2020.02
-set pythonthreedll=~/.pyenv/versions/anaconda3-2020.02/lib/libpython3.7m.dylib
+set pythonthreehome=~/.pyenv/versions/3.7.9
+set pythonthreedll=~/.pyenv/versions/3.7.9/lib/libpython3.7m.dylib
 
 set nocompatible              " be iMproved, required
 filetype off                  " required

@@ -1,6 +1,5 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:$PATH
-export PATH=/Users/trondbn/.pyenv/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/trondbn/.oh-my-zsh"
@@ -9,7 +8,7 @@ export ZSH="/Users/trondbn/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME="robbyrussell"
 DEFAULT_USER=trondbn
 
 # Set list of themes to pick from when loading at random
@@ -101,7 +100,10 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 source ~/.iterm2_shell_integration.zsh
+
 alias pylab="ipython --pylab"
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+
+source ~/.profile
 eval "$(pyenv init -)"
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 eval "$(pyenv virtualenv-init -)"
