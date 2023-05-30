@@ -16,13 +16,6 @@
 	tool = opendiff
 [lfs "customtransfer.bitbucket-media-api"]
 	path = /Users/trondbn/bin/git-lfs-bitbucket-media-api
-[alias]
-  ci = commit
-  co = checkout
-	br = branch
-  sm = submodule
-  st = status
-  sw = switch
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge --skip -- %f
@@ -32,3 +25,12 @@
 	tool = opendiff
 [pull]
 	ff = only
+[commit]
+        template = /Users/trondbn/.stCommitMsg
+[filter "jupyternotebook"]
+        clean = jupyter nbconvert --to=notebook --ClearOutputPreprocessor.enabled=True --stdout %f
+        smudge = cat
+        required
+[mergetool "code"]
+    cmd = code --wait --merge $REMOTE $LOCAL $BASE $MERGED
+
