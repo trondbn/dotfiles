@@ -1,5 +1,10 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:$PATH
+if [ "$(arch)" = "arm64" ]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+else
+    eval "$(/usr/local/bin/brew shellenv)"
+fi
+export PATH=$HOME/bin:$PATH:$HOME/.docker/bin
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/trondbn/.oh-my-zsh"
@@ -99,7 +104,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-source ~/.iterm2_shell_integration.zsh
+if [[ $TERM_PROGRAM = "iTerm.app" ]]; then
+    test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+fi
 
 alias pylab="ipython --pylab"
 
@@ -107,3 +114,4 @@ source ~/.profile
 eval "$(pyenv init -)"
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 eval "$(pyenv virtualenv-init -)"
+
