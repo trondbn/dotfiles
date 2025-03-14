@@ -9,6 +9,8 @@ export PATH=$HOME/bin:$PATH:$HOME/.docker/bin
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/trondbn/.oh-my-zsh"
 
+source ~/.profile
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -74,7 +76,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git pip sudo)
+plugins=(brew git pip pyenv sudo)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -110,8 +112,9 @@ fi
 
 alias pylab="ipython --pylab"
 
-source ~/.profile
-eval "$(pyenv init -)"
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-eval "$(pyenv virtualenv-init -)"
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/trondbn/Applications/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/trondbn/Applications/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/trondbn/Applications/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/trondbn/Applications/google-cloud-sdk/completion.zsh.inc'; fi
 

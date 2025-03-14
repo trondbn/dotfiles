@@ -26,11 +26,6 @@
 [pull]
 	ff = only
 [commit]
-        template = /Users/trondbn/.stCommitMsg
-[filter "jupyternotebook"]
-        clean = jupyter nbconvert --to=notebook --ClearOutputPreprocessor.enabled=True --stdout %f
-        smudge = cat
-        required
+	template = /Users/trondbn/.stCommitMsg
 [mergetool "code"]
-    cmd = code --wait --merge $REMOTE $LOCAL $BASE $MERGED
-
+	cmd = code --wait --merge $REMOTE $LOCAL $BASE $MERGED
